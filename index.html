@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Press kit for Witches' Grove (满月大乱斗), a pixel-art auto battler by Indeptus Entertainment.">
+<title>Witches' Grove Press Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Layout: a moonlit festival programme. One narrow reading column, wide media rows, a sticky language strip. */
+:root{
+  --bg:#f6f1fa; --panel:#ffffff; --ink:#2a2140; --muted:#6b5f86; --line:#ddd2ea;
+  --moon:#b07a12; --rose:#c2367f; --glade:#2f7a5a; --chip:#efe6f7;
+  --display:"Pixelify Sans","Atkinson Hyperlegible",system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible","PingFang SC","PingFang TC","Microsoft YaHei","Microsoft JhengHei","Noto Sans CJK SC",system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141024; --panel:#1d1733; --ink:#efe8fb; --muted:#a99cc6; --line:#352b55;
+  --moon:#f2c45a; --rose:#f27ab8; --glade:#6fd3a2; --chip:#271f43; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141024; --panel:#1d1733; --ink:#efe8fb; --muted:#a99cc6; --line:#352b55;
+  --moon:#f2c45a; --rose:#f27ab8; --glade:#6fd3a2; --chip:#271f43; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--body);margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:1.75rem;color:var(--moon)}
+h3{font-size:1.1rem}
+p{margin:0}
+a{color:var(--rose)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--moon);outline-offset:2px}
+img,video{max-width:100%;height:auto;display:block}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-size:1.05rem}
+.langs{display:flex;gap:4px;background:var(--chip);padding:4px;border-radius:999px}
+.langs button{font:inherit;font-size:.9rem;border:0;background:transparent;color:var(--muted);padding:4px 12px;border-radius:999px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--panel);color:var(--ink);font-weight:700;box-shadow:0 1px 2px rgb(0 0 0/.15)}
+section{padding-block:48px;display:grid;gap:20px}
+section+section{border-top:1px solid var(--line)}
+.hero{padding-block:32px 40px;gap:24px}
+.hero .logo{width:min(520px,100%);height:auto}
+.lede{font-size:1.2rem;max-width:62ch}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font:700 .95rem var(--body);padding:10px 16px;border-radius:8px;text-decoration:none;border:2px solid var(--rose);color:var(--rose);background:transparent;cursor:pointer}
+.btn.solid{background:var(--rose);color:var(--bg)}
+.video{border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000;aspect-ratio:16/9;width:100%}
+.video video{width:100%;height:100%;object-fit:contain;image-rendering:auto}
+.note{color:var(--muted);font-size:.9rem}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel)}
+.facts div{padding:14px 16px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);min-width:0}
+.facts dt{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:2px 0 0;font-weight:700;font-variant-numeric:tabular-nums}
+.cols{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:32px}
+@media (max-width:760px){.cols{grid-template-columns:1fr}}
+.prose{display:grid;gap:14px;max-width:65ch}
+ul.feat{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.cast{display:grid;gap:10px}
+.cast p b{color:var(--glade)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr))}
+#shots img{width:100%;aspect-ratio:16/9}
+#gifs img{width:100%}
+figure{margin:0;display:grid;gap:6px;min-width:0}
+figure a{display:block;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:var(--panel)}
+figcaption{font-size:.85rem;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.art{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.art a{display:flex;align-items:center;justify-content:center;min-height:150px;padding:8px}
+.art img{max-height:220px;width:auto}
+.streamer{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:6px;align-content:start}
+.card h3{color:var(--glade)}
+blockquote{margin:0;padding:18px 20px;background:var(--panel);border:1px solid var(--line);border-radius:10px;display:grid;gap:12px;max-width:70ch}
+.contact{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.mail{font:700 1.15rem var(--body);user-select:all;word-break:break-all}
+footer{padding-block:32px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+[data-l]{display:none}
+html[data-lang="en"] [data-l="en"],html[data-lang="sc"] [data-l="sc"],html[data-lang="tc"] [data-l="tc"]{display:revert}
+html[data-lang="en"] span[data-l="en"],html[data-lang="sc"] span[data-l="sc"],html[data-lang="tc"] span[data-l="tc"]{display:inline}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+
+<div class="bar"><div class="wrap">
+  <div class="brand"><span data-l="en">Witches' Grove · Press kit</span><span data-l="sc">《满月大乱斗》媒体资料包</span><span data-l="tc">《滿月大亂鬥》媒體資料包</span></div>
+  <div class="langs" role="group" aria-label="Language">
+    <button id="l-en" data-set="en" aria-pressed="true">English</button>
+    <button id="l-sc" data-set="sc" aria-pressed="false">简体</button>
+    <button id="l-tc" data-set="tc" aria-pressed="false">繁體</button>
+  </div>
+</div></div>
+
+<main class="wrap">
+<section class="hero">
+  <img class="logo" data-src="media/art/library-logo-1280_{L}.png" src="media/art/library-logo-1280_english.png" alt="Witches' Grove logo" width="1280" height="616">
+  <p class="lede" data-l="en">A pixel-art auto battler about mentoring one fighter through a gameshow-like magical tournament. Fights play out on their own while you shop, train and scheme between rounds, and a witch keeps casting spells into the ring.</p>
+  <p class="lede" data-l="sc">一款像素风自走棋游戏：你将指导一名门徒，闯过一场综艺节目般的魔法锦标赛。战斗自动进行，你在回合之间采购、训练、出谋划策，而女巫会不断把法术丢进擂台。</p>
+  <p class="lede" data-l="tc">一款像素風自走棋遊戲：你將指導一名門徒，闖過一場綜藝節目般的魔法錦標賽。戰鬥自動進行，你在回合之間採購、訓練、出謀劃策，而女巫會不斷把法術丟進擂台。</p>
+  <div class="cta">
+    <a class="btn solid" href="https://store.steampowered.com/app/2593060/" target="_blank" rel="noopener"><span data-l="en">Wishlist on Steam</span><span data-l="sc">在 Steam 加入愿望单</span><span data-l="tc">在 Steam 加入願望清單</span></a>
+    <a class="btn" href="#contact"><span data-l="en">Request a key</span><span data-l="sc">索取激活码</span><span data-l="tc">索取序號</span></a>
+  </div>
+  <div class="video"><video id="trailer" controls preload="metadata" playsinline data-poster="media/art/trailer-cover_{L}.png" poster="media/art/trailer-cover_english.png"><source src="media/trailer.mp4" type="video/mp4"></video></div>
+  <p class="note"><span data-l="en">Trailer, 72 seconds. The full-quality 1080p trailer is on the Steam page.</span><span data-l="sc">预告片，72 秒。完整画质及中文字幕版预告片请见 Steam 商店页。</span><span data-l="tc">預告片，72 秒。完整畫質及中文字幕版預告片請見 Steam 商店頁。</span></p>
+</section>
+
+<section>
+  <h2><span data-l="en">Fact sheet</span><span data-l="sc">基本信息</span><span data-l="tc">基本資訊</span></h2>
+  <dl class="facts">
+    <div><dt><span data-l="en">Title</span><span data-l="sc">名称</span><span data-l="tc">名稱</span></dt><dd>Witches' Grove<br><span data-l="en">满月大乱斗 / 滿月大亂鬥</span><span data-l="sc">满月大乱斗</span><span data-l="tc">滿月大亂鬥</span></dd></div>
+    <div><dt><span data-l="en">Developer</span><span data-l="sc">开发商</span><span data-l="tc">開發商</span></dt><dd>Indeptus Entertainment <span data-l="en">(solo developer)</span><span data-l="sc">（独立开发者一人）</span><span data-l="tc">（獨立開發者一人）</span></dd></div>
+    <div><dt><span data-l="en">Release</span><span data-l="sc">发售</span><span data-l="tc">發售</span></dt><dd><span data-l="en">December 2026</span><span data-l="sc">2026 年 12 月</span><span data-l="tc">2026 年 12 月</span></dd></div>
+    <div><dt><span data-l="en">Price</span><span data-l="sc">价格</span><span data-l="tc">價格</span></dt><dd>US$2.99 <span data-l="en">· 10% off at launch</span><span data-l="sc">· 首发 9 折</span><span data-l="tc">· 首發 9 折</span></dd></div>
+    <div><dt><span data-l="en">Platform</span><span data-l="sc">平台</span><span data-l="tc">平台</span></dt><dd>Windows (Steam)</dd></div>
+    <div><dt><span data-l="en">Languages</span><span data-l="sc">语言</span><span data-l="tc">語言</span></dt><dd><span data-l="en">English, Simplified Chinese, Traditional Chinese</span><span data-l="sc">英语、简体中文、繁体中文</span><span data-l="tc">英語、簡體中文、繁體中文</span></dd></div>
+    <div><dt><span data-l="en">Genre</span><span data-l="sc">类型</span><span data-l="tc">類型</span></dt><dd><span data-l="en">Auto battler, roguelite</span><span data-l="sc">自走棋、轻度肉鸽</span><span data-l="tc">自走棋、輕度肉鴿</span></dd></div>
+    <div><dt><span data-l="en">Players</span><span data-l="sc">玩家人数</span><span data-l="tc">玩家人數</span></dt><dd><span data-l="en">Single player, plays offline</span><span data-l="sc">单人，可离线游玩</span><span data-l="tc">單人，可離線遊玩</span></dd></div>
+    <div><dt><span data-l="en">Run length</span><span data-l="sc">单局时长</span><span data-l="tc">單局時長</span></dt><dd><span data-l="en">~10 min Short Rumpus · ~15 min Grand Rumpus</span><span data-l="sc">小乱斗约 10 分钟 · 满月大乱斗约 15 分钟</span><span data-l="tc">小亂鬥約 10 分鐘 · 滿月大亂鬥約 15 分鐘</span></dd></div>
+    <div><dt><span data-l="en">Content</span><span data-l="sc">内容</span><span data-l="tc">內容</span></dt><dd><span data-l="en">12 fighters · 69 items · 4 Grove Games</span><span data-l="sc">12 名斗士 · 69 种道具 · 4 种林苑游戏</span><span data-l="tc">12 名鬥士 · 69 種道具 · 4 種林苑遊戲</span></dd></div>
+    <div><dt>Steam</dt><dd><a href="https://store.steampowered.com/app/2593060/" target="_blank" rel="noopener">store.steampowered.com/app/2593060</a></dd></div>
+    <div><dt><span data-l="en">Press contact</span><span data-l="sc">媒体联系</span><span data-l="tc">媒體聯繫</span></dt><dd style="word-break:break-all">info@indeptusentertainment.com</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2><span data-l="en">About the game</span><span data-l="sc">游戏介绍</span><span data-l="tc">遊戲介紹</span></h2>
+  <div class="cols">
+    <div class="prose">
+      <div data-l="en" class="prose">
+        <p>Choose a champion from a lineup of oddballs, and every run rolls them a fresh set of abilities. Send them into the ring with up to seven rivals. From round two, the lowest finishers are out. Outlast them all and win the Champion's Wish.</p>
+        <p>Nettle's market restocks every round. Teach a technique that rewires an ability, stack Training Tickets, pick up charms that come with a catch, and fill your belt with storms, frost, honey and exploding mushrooms.</p>
+        <p>Every run earns Petals and affinity with your fighter. Raise affinity to unlock new techniques, a second technique slot and five story chapters that end in your fighter's own wish.</p>
+        <p><b>Short Rumpus:</b> six fighters and five rounds, a quick run. <b>Grand Rumpus:</b> eight fighters, seven rounds and Grove Games in the middle.</p>
+      </div>
+      <div data-l="sc" class="prose">
+        <p>从一群怪咖中挑选你的门徒，每局开始时，门徒的技能都会重新随机。把门徒送上擂台，与最多七名对手同场较量。从第二轮起，排名垫底的斗士将被淘汰。坚持到最后，赢得冠军之愿！</p>
+        <p>奈托的市场每轮都会补货。学习能改写技能的技能精通，叠加训练券，挑选附带代价的护符，再把腰带塞满风暴、冰霜、蜂蜜和会爆炸的蘑菇。</p>
+        <p>每局都能赚取花瓣，并提升与门徒的亲密度。提升亲密度可解锁新的技能精通、第二个技能精通栏位，以及五个故事章节，最终迎来门徒自己的愿望。</p>
+        <p><b>小乱斗：</b>六名斗士、五轮比赛，随时来一局。<b>满月大乱斗：</b>八名斗士、七轮比赛，中途还有林苑游戏！</p>
+      </div>
+      <div data-l="tc" class="prose">
+        <p>從一群怪咖中挑選你的門徒，每局開始時，門徒的技能都會重新隨機。把門徒送上擂台，與最多七名對手同場較量。從第二輪起，排名墊底的鬥士將被淘汰。堅持到最後，贏得冠軍之願！</p>
+        <p>奈托的市場每輪都會補貨。學習能改寫技能的技能精通，疊加訓練券，挑選附帶代價的護符，再把腰帶塞滿風暴、冰霜、蜂蜜和會爆炸的蘑菇。</p>
+        <p>每局都能賺取花瓣，並提升與門徒的親密度。提升親密度可解鎖新的技能精通、第二個技能精通欄位，以及五個故事章節，最終迎來門徒自己的願望。</p>
+        <p><b>小亂鬥：</b>六名鬥士、五輪比賽，隨時來一局。<b>滿月大亂鬥：</b>八名鬥士、七輪比賽，中途還有林苑遊戲！</p>
+      </div>
+    </div>
+    <div class="cast">
+      <h3><span data-l="en">Meet a few of the twelve</span><span data-l="sc">十二名斗士中的几位</span><span data-l="tc">十二名鬥士中的幾位</span></h3>
+      <p data-l="en"><b>Cinder</b>, an ember drake who brags about every scorch mark.</p>
+      <p data-l="en"><b>Old Rime</b>, a glacier who walked to the Grove. It took him three hundred summers.</p>
+      <p data-l="en"><b>Juniper</b>, a kitsune with one tail and nine excuses.</p>
+      <p data-l="en"><b>Duchess Puffcap</b>, who expects a bow and settles for a sneeze.</p>
+      <p data-l="sc"><b>辛德</b>：一条火龙，每道焦痕都要拿来吹嘘。</p>
+      <p data-l="sc"><b>老霜</b>：一座走到林苑来的冰川，这段路他走了三百个夏天。</p>
+      <p data-l="sc"><b>杜松</b>：一只只有一条尾巴、却有九个借口的狐仙。</p>
+      <p data-l="sc"><b>菌帽公爵夫人</b>：期待别人鞠躬，最后只换来一个喷嚏。</p>
+      <p data-l="tc"><b>辛德</b>：一條火龍，每道焦痕都要拿來吹噓。</p>
+      <p data-l="tc"><b>老霜</b>：一座走到林苑來的冰川，這段路他走了三百個夏天。</p>
+      <p data-l="tc"><b>杜松</b>：一隻只有一條尾巴、卻有九個藉口的狐仙。</p>
+      <p data-l="tc"><b>菌帽公爵夫人</b>：期待別人鞠躬，最後只換來一個噴嚏。</p>
+      <p class="note"><span data-l="en">Eight fighters are ready from the start and four more are found along the way. Each has about ten abilities, two ultimates and six techniques.</span><span data-l="sc">八名斗士开局可用，另有四名等你发现。每名斗士约有十个技能、两种大招和六个技能精通。</span><span data-l="tc">八名鬥士開局可用，另有四名等你發現。每名鬥士約有十個技能、兩種大招和六個技能精通。</span></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>GIFs</h2>
+  <p class="note"><span data-l="en">Six animated clips from the store page. Open one to save it at full size.</span><span data-l="sc">商店页的六段动图，点开即可保存原图。</span><span data-l="tc">商店頁的六段動圖，點開即可儲存原圖。</span></p>
+  <div class="grid" id="gifs"></div>
+</section>
+
+<section>
+  <h2><span data-l="en">Screenshots</span><span data-l="sc">截图</span><span data-l="tc">截圖</span></h2>
+  <p class="note"><span data-l="en">1920 × 1080 PNG. Open one to save it at full size.</span><span data-l="sc">1920 × 1080 PNG，点开即可保存原图。部分界面文字仍为英文。</span><span data-l="tc">1920 × 1080 PNG，點開即可儲存原圖。部分介面文字仍為英文。</span></p>
+  <div class="grid" id="shots"></div>
+</section>
+
+<section>
+  <h2><span data-l="en">Logo and key art</span><span data-l="sc">标志与主视觉</span><span data-l="tc">標誌與主視覺</span></h2>
+  <div class="grid art" id="art"></div>
+</section>
+
+<section>
+  <h2><span data-l="en">For streamers and creators</span><span data-l="sc">致主播与 UP 主</span><span data-l="tc">致實況主與創作者</span></h2>
+  <div class="streamer">
+    <div class="card"><h3><span data-l="en">Music is safe</span><span data-l="sc">音乐可放心使用</span><span data-l="tc">音樂可放心使用</span></h3><p><span data-l="en">Stream and monetise freely. The soundtrack is commercially licensed.</span><span data-l="sc">可自由直播并用于视频变现。原声音乐已获商业授权。</span><span data-l="tc">可自由直播並用於影片營利。原聲音樂已取得商業授權。</span></p></div>
+    <div class="card"><h3><span data-l="en">Fits a set</span><span data-l="sc">时长友好</span><span data-l="tc">時長友善</span></h3><p><span data-l="en">A Short Rumpus takes about 10 minutes and a Grand Rumpus about 15, so several runs fit in one stream.</span><span data-l="sc">一局小乱斗约 10 分钟，满月大乱斗约 15 分钟，一场直播可以玩好几局。</span><span data-l="tc">一局小亂鬥約 10 分鐘，滿月大亂鬥約 15 分鐘，一場實況可以玩好幾局。</span></p></div>
+    <div class="card"><h3><span data-l="en">Made for chat</span><span data-l="sc">适合和观众互动</span><span data-l="tc">適合和觀眾互動</span></h3><p><span data-l="en">Fights play out on their own, so you can talk to chat, cheer your fighter and let viewers pick who to back next.</span><span data-l="sc">战斗自动进行，你可以边看边和弹幕聊天，为门徒加油，让观众决定下一局带谁。</span><span data-l="tc">戰鬥自動進行，你可以邊看邊和聊天室互動，替門徒加油，讓觀眾決定下一局帶誰。</span></p></div>
+    <div class="card"><h3><span data-l="en">Keys</span><span data-l="sc">激活码</span><span data-l="tc">序號</span></h3><p><span data-l="en">Email with your channel link and we'll send a Steam key. Keys before launch come with an embargo until release day.</span><span data-l="sc">发邮件附上你的频道链接，我们会寄送 Steam 激活码。发售前的激活码需等到发售日后再发布内容。</span><span data-l="tc">寄信附上你的頻道連結，我們會寄送 Steam 序號。發售前的序號需等到發售日後再發布內容。</span></p></div>
+  </div>
+</section>
+
+<section>
+  <h2><span data-l="en">How AI was used</span><span data-l="sc">关于 AI 的使用</span><span data-l="tc">關於 AI 的使用</span></h2>
+  <blockquote data-l="en">
+    <p>Witches' Grove is made by one person, and I want to be upfront about how it was built.</p>
+    <p>I used AI tools heavily during development. AI helped make the pixel-art sprites and effects (drawn as code) and the music, and it helped write much of the game's code.</p>
+    <p>AI made it possible for a solo developer to build something this size. It didn't decide what the game should be. Every fighter, wish, item and joke went through my hands. I played it over and over, threw out what didn't feel right, and sent things back again and again until they had the warmth and personality I wanted. The design, the world, the characters' stories and every final call are mine.</p>
+    <p>Nothing in the game is generated live while you play. Everything you see and hear was made and checked before release.</p>
+    <p>I hope you can feel the care that went into the Grove. Thank you for giving it a chance.</p>
+  </blockquote>
+  <blockquote data-l="sc">
+    <p>《满月大乱斗》由一个人制作完成，我想坦诚地说明它是怎么做出来的。</p>
+    <p>开发过程中我大量使用了 AI 工具。AI 帮忙制作了像素风角色与特效（以代码绘制）和音乐，也帮忙编写了游戏的大部分代码。</p>
+    <p>AI 让一名独立开发者能够做出这样规模的游戏，但它并没有决定这款游戏应该是什么样子。每一位斗士、每一个愿望、每一件道具和每一个笑话都经过我亲手打磨。我一遍又一遍地试玩，删掉感觉不对的部分，反复修改，直到它们拥有我想要的温度和个性。游戏的设计、世界观、角色故事以及每一个最终决定，都出自我手。</p>
+    <p>游戏中没有任何内容是在游玩时实时生成的。你看到和听到的一切，都在发售前制作并检查完毕。</p>
+    <p>希望你能感受到我倾注在林苑里的心意。谢谢你愿意给它一次机会。</p>
+  </blockquote>
+  <blockquote data-l="tc">
+    <p>《滿月大亂鬥》由一個人製作完成，我想坦誠地說明它是怎麼做出來的。</p>
+    <p>開發過程中我大量使用了 AI 工具。AI 幫忙製作了像素風角色與特效（以程式碼繪製）和音樂，也幫忙編寫了遊戲的大部分程式碼。</p>
+    <p>AI 讓一名獨立開發者能夠做出這樣規模的遊戲，但它並沒有決定這款遊戲應該是什麼樣子。每一位鬥士、每一個願望、每一件道具和每一個笑話都經過我親手打磨。我一遍又一遍地試玩，刪掉感覺不對的部分，反覆修改，直到它們擁有我想要的溫度和個性。遊戲的設計、世界觀、角色故事以及每一個最終決定，都出自我手。</p>
+    <p>遊戲中沒有任何內容是在遊玩時即時生成的。你看到和聽到的一切，都在發售前製作並檢查完畢。</p>
+    <p>希望你能感受到我傾注在林苑裡的心意。謝謝你願意給它一次機會。</p>
+  </blockquote>
+</section>
+
+<section id="contact">
+  <h2><span data-l="en">Contact</span><span data-l="sc">联系方式</span><span data-l="tc">聯絡方式</span></h2>
+  <p><span data-l="en">Press, key requests and sponsorship enquiries:</span><span data-l="sc">媒体、激活码申请及商务合作：</span><span data-l="tc">媒體、序號申請及商務合作：</span></p>
+  <div class="contact">
+    <span class="mail" id="mail">info@indeptusentertainment.com</span>
+    <button class="btn" id="copy" type="button"><span data-l="en">Copy address</span><span data-l="sc">复制邮箱</span><span data-l="tc">複製信箱</span></button>
+    <span class="note" id="copied" hidden></span>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">© 2026 Indeptus Entertainment. <span data-l="en">Assets on this page may be used in coverage of Witches' Grove.</span><span data-l="sc">本页素材可用于《满月大乱斗》的相关报道与视频。</span><span data-l="tc">本頁素材可用於《滿月大亂鬥》的相關報導與影片。</span></div></footer>
+
+<script>
+const LANG={en:'english',sc:'schinese',tc:'tchinese'};
+const GIFS=[
+ ['1-mentor-a-fighter-to-victory','Mentor a fighter to victory','带领斗士走向胜利','帶領鬥士走向勝利'],
+ ['2-twelve-oddballs','Twelve oddballs, one wish','十二个怪咖，一个愿望','十二個怪咖，一個願望'],
+ ['3-shop-scheme-potions','Shop, scheme, throw potions','购物、谋划、扔药水','購物、謀劃、扔藥水'],
+ ['4-grow-closer','Grow closer every run','每一局都更亲近','每一局都更親近'],
+ ['5-big-brawl-quick-scrap','Grand Rumpus or Short Rumpus','满月大乱斗，还是小乱斗','滿月大亂鬥，還是小亂鬥'],
+ ['6-pick-your-champion','Pick your champion','挑选你的斗士','挑選你的鬥士']];
+const SHOTS=[
+ ['01-ult-clash','Ultimate clash','大招对决','大招對決'],['02-moonring-brawl','Moonring brawl','月环擂台混战','月環擂台混戰'],
+ ['03-potion-throw','Potion throw','投掷药水','投擲藥水'],['04-pick-your-mentee','Pick your mentee','挑选门徒','挑選門徒'],
+ ['05-market','Nettle\'s market','奈托的市场','奈托的市場'],['06-pumpkin-roll','Pumpkin Roll','南瓜滚滚','南瓜滾滾'],
+ ['07-feast-table','Feast Table','宴会长桌','宴會長桌'],['08-heartwood-brawl','Heartwood brawl','心木擂台混战','心木擂台混戰']];
+const ART=[
+ ['library-logo-1280','Logo, 1280 px','标志 1280 px','標誌 1280 px'],
+ ['header-capsule-920x430','Header capsule, 920 × 430','横幅 920 × 430','橫幅 920 × 430'],
+ ['main-capsule-1232x706','Main capsule, 1232 × 706','主视觉 1232 × 706','主視覺 1232 × 706'],
+ ['vertical-capsule-748x896','Vertical capsule, 748 × 896','竖版 748 × 896','直式 748 × 896'],
+ ['library-capsule-600x900','Library capsule, 600 × 900','库封面 600 × 900','收藏庫封面 600 × 900'],
+ ['library-hero-3840x1240','Hero art, 3840 × 1240 (no text)','背景主图 3840 × 1240（无文字）','背景主圖 3840 × 1240（無文字）',true]];
+const IDX={en:1,sc:2,tc:3};
+function fig(src,cap,w,h,lazy){return `<figure><a href="${src}" target="_blank" rel="noopener"><img src="${src}" alt="${cap}" ${w?`width="${w}" height="${h}"`:''} loading="${lazy?'lazy':'eager'}"></a><figcaption><span>${cap}</span></figcaption></figure>`}
+function render(l){
+  const s=LANG[l],i=IDX[l];
+  document.getElementById('gifs').innerHTML=GIFS.map(g=>fig(`media/gifs/${g[0]}_${s}.gif`,g[i],0,0,true)).join('');
+  document.getElementById('shots').innerHTML=SHOTS.map(g=>fig(`media/shots/${g[0]}_${s}.png`,g[i],1920,1080,true)).join('');
+  document.getElementById('art').innerHTML=ART.map(g=>fig(`media/art/${g[0]}_${g[4]?'english':s}.png`,g[i],0,0,true)).join('');
+  document.querySelectorAll('[data-src]').forEach(e=>e.src=e.dataset.src.replace('{L}',s));
+  const v=document.getElementById('trailer');v.poster=v.dataset.poster.replace('{L}',s);
+  document.documentElement.dataset.lang=l;
+  document.documentElement.lang=l==='en'?'en':l==='sc'?'zh-Hans':'zh-Hant';
+  document.querySelectorAll('.langs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.set===l));
+}
+function fromHash(){const h=location.hash.slice(1);return h==='zh-hans'?'sc':h==='zh-hant'?'tc':'en'}
+document.querySelectorAll('.langs button').forEach(b=>b.addEventListener('click',()=>{const l=b.dataset.set;render(l);try{history.replaceState(null,'',l==='en'?'#en':l==='sc'?'#zh-hans':'#zh-hant')}catch(e){}}));
+addEventListener('hashchange',()=>render(fromHash()));
+document.getElementById('copy').addEventListener('click',()=>{
+  const t=document.getElementById('copied'),l=document.documentElement.dataset.lang;
+  const ok={en:'Copied',sc:'已复制',tc:'已複製'}[l];
+  navigator.clipboard.writeText('info@indeptusentertainment.com').then(()=>{t.textContent=ok;t.hidden=false},()=>{const r=document.createRange();r.selectNodeContents(document.getElementById('mail'));const sel=getSelection();sel.removeAllRanges();sel.addRange(r)});
+});
+render(fromHash());
+</script>
+
+</body>
+</html>
