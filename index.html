@@ -53,7 +53,7 @@ section+section{border-top:1px solid var(--line)}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel)}
 .facts div{padding:14px 16px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);min-width:0}
 .facts dt{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.facts dd{margin:2px 0 0;font-weight:700;font-variant-numeric:tabular-nums}
+.facts dd{margin:2px 0 0;font-weight:700;font-variant-numeric:tabular-nums;overflow-wrap:break-word}
 .cols{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:32px}
 @media (max-width:760px){.cols{grid-template-columns:1fr}}
 .prose{display:grid;gap:14px;max-width:65ch}
@@ -121,8 +121,8 @@ html[data-lang="en"] span[data-l="en"],html[data-lang="sc"] span[data-l="sc"],ht
     <div><dt><span data-l="en">Players</span><span data-l="sc">玩家人数</span><span data-l="tc">玩家人數</span></dt><dd><span data-l="en">Single player, plays offline</span><span data-l="sc">单人，可离线游玩</span><span data-l="tc">單人，可離線遊玩</span></dd></div>
     <div><dt><span data-l="en">Run length</span><span data-l="sc">单局时长</span><span data-l="tc">單局時長</span></dt><dd><span data-l="en">~10 min Short Rumpus · ~15 min Grand Rumpus</span><span data-l="sc">小乱斗约 10 分钟 · 满月大乱斗约 15 分钟</span><span data-l="tc">小亂鬥約 10 分鐘 · 滿月大亂鬥約 15 分鐘</span></dd></div>
     <div><dt><span data-l="en">Content</span><span data-l="sc">内容</span><span data-l="tc">內容</span></dt><dd><span data-l="en">12 fighters · 69 items · 4 Grove Games</span><span data-l="sc">12 名斗士 · 69 种道具 · 4 种林苑游戏</span><span data-l="tc">12 名鬥士 · 69 種道具 · 4 種林苑遊戲</span></dd></div>
-    <div><dt>Steam</dt><dd><a href="https://store.steampowered.com/app/2593060/" target="_blank" rel="noopener">store.steampowered.com/app/2593060</a></dd></div>
-    <div><dt><span data-l="en">Press contact</span><span data-l="sc">媒体联系</span><span data-l="tc">媒體聯繫</span></dt><dd style="word-break:break-all">info@indeptusentertainment.com</dd></div>
+    <div><dt>Steam</dt><dd><a href="https://store.steampowered.com/app/2593060/" target="_blank" rel="noopener"><span data-l="en">Store page</span><span data-l="sc">商店页面</span><span data-l="tc">商店頁面</span></a></dd></div>
+    <div><dt><span data-l="en">Press contact</span><span data-l="sc">媒体联系</span><span data-l="tc">媒體聯繫</span></dt><dd>info@<wbr>indeptusentertainment.com</dd></div>
   </dl>
 </section>
 
