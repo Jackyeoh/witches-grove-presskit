@@ -48,7 +48,7 @@ section+section{border-top:1px solid var(--line)}
 .btn{display:inline-flex;align-items:center;gap:8px;font:700 .95rem var(--body);padding:10px 16px;border-radius:8px;text-decoration:none;border:2px solid var(--rose);color:var(--rose);background:transparent;cursor:pointer}
 .btn.solid{background:var(--rose);color:var(--bg)}
 .video{border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000;aspect-ratio:16/9;width:100%}
-.video video{width:100%;height:100%;object-fit:contain;image-rendering:auto}
+.video iframe{width:100%;height:100%;border:0;display:block}
 .note{color:var(--muted);font-size:.9rem}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel)}
 .facts div{padding:14px 16px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);min-width:0}
@@ -104,8 +104,8 @@ html[data-lang="en"] span[data-l="en"],html[data-lang="sc"] span[data-l="sc"],ht
     <a class="btn solid" href="https://store.steampowered.com/app/2593060/" target="_blank" rel="noopener"><span data-l="en">Wishlist on Steam</span><span data-l="sc">在 Steam 加入愿望单</span><span data-l="tc">在 Steam 加入願望清單</span></a>
     <a class="btn" href="#contact"><span data-l="en">Request a key</span><span data-l="sc">索取激活码</span><span data-l="tc">索取序號</span></a>
   </div>
-  <div class="video"><video id="trailer" controls preload="metadata" playsinline data-poster="media/art/trailer-cover_{L}.png" poster="media/art/trailer-cover_english.png"><source src="media/trailer.mp4" type="video/mp4"></video></div>
-  <p class="note"><span data-l="en">Trailer, 72 seconds. The full-quality 1080p trailer is on the Steam page.</span><span data-l="sc">预告片，72 秒。完整画质及中文字幕版预告片请见 Steam 商店页。</span><span data-l="tc">預告片，72 秒。完整畫質及中文字幕版預告片請見 Steam 商店頁。</span></p>
+  <div class="video"><iframe id="trailer" src="https://www.youtube-nocookie.com/embed/3NGAhOqtQpc?rel=0" title="Witches' Grove trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+  <p class="note"><span data-l="en">Trailer: <a href="https://youtu.be/3NGAhOqtQpc" target="_blank" rel="noopener">watch on YouTube</a>. The full-quality 1080p trailer is also on the Steam page.</span><span data-l="sc">预告片：<a href="https://youtu.be/3NGAhOqtQpc" target="_blank" rel="noopener">在 YouTube 观看</a>。完整画质及中文字幕版预告片请见 Steam 商店页。</span><span data-l="tc">預告片：<a href="https://youtu.be/3NGAhOqtQpc" target="_blank" rel="noopener">在 YouTube 觀看</a>。完整畫質及中文字幕版預告片請見 Steam 商店頁。</span></p>
 </section>
 
 <section>
@@ -261,7 +261,6 @@ function render(l){
   document.getElementById('shots').innerHTML=SHOTS.map(g=>fig(`media/shots/${g[0]}_${s}.png`,g[i],1920,1080,true)).join('');
   document.getElementById('art').innerHTML=ART.map(g=>fig(`media/art/${g[0]}_${g[4]?'english':s}.png`,g[i],0,0,true)).join('');
   document.querySelectorAll('[data-src]').forEach(e=>e.src=e.dataset.src.replace('{L}',s));
-  const v=document.getElementById('trailer');v.poster=v.dataset.poster.replace('{L}',s);
   document.documentElement.dataset.lang=l;
   document.documentElement.lang=l==='en'?'en':l==='sc'?'zh-Hans':'zh-Hant';
   document.querySelectorAll('.langs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.set===l));
